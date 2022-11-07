@@ -80,6 +80,10 @@ const config = {
             label: 'GitHub',
             position: 'right',
           },
+          {
+            type: 'search',
+            position: 'right',
+          },
         ],
       },
       footer: {
@@ -110,6 +114,19 @@ const config = {
         darkTheme: darkCodeTheme,
       },
     }),
+    themes: [
+      [
+        require.resolve("@easyops-cn/docusaurus-search-local"),
+        /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
+        ({
+          indexDocs: true,
+          indexBlog: false,
+          docsRouteBasePath: '/',
+          language: 'en',
+          hashed: true,
+        }),
+      ],
+    ],
 };
 
 module.exports = config;
