@@ -70,12 +70,12 @@ const config = {
           src: 'img/logo.svg',
         },
         items: [
-          {
-            type: 'doc',
-            docId: 'index',
-            position: 'left',
-            label: 'Knowledge',
-          },
+          // {
+          //   type: 'doc',
+          //   docId: 'index',
+          //   position: 'left',
+          //   label: 'Knowledge',
+          // },
           // {to: '/blog', label: 'Blog', position: 'left'},
           {
             href: 'https://github.com/galenguyer/knowledge',
