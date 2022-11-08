@@ -13,9 +13,9 @@ For some reason Mastodon's docs don't have any instructions on running with Dock
 1. Clone the Mastodon repository (https://github.com/tootsuite/mastodon)
 2. Check out the latest stable version (unless you really like living on the edge) with `git checkout $(git tag -l | grep -v 'rc[0-9]*$' | sort -rV | head -n1)`
 3. Review the settings in `docker-compose.yml`. You'll want to choose between building from source and commenting out the `image: tootsuite/mastodon` lines or using the prebuilt images and commenting out `build: .`
-   1. If you're pulling from Docker Hub, make sure you specify the version like so: `docker.io/tootsuite/mastodon:v3.5.3`
+   - If you're pulling from Docker Hub, make sure you specify the version like so: `docker.io/tootsuite/mastodon:v3.5.3`
 4. Copy the env config from `.env.production.sample` to `.env.production` and make any needed changes
-    All the config options are documented here: https://docs.joinmastodon.org/admin/config/
+   - All the config options are documented here: https://docs.joinmastodon.org/admin/config/
 5. Run `docker-compose run --rm web bundle exec rake secret` and `docker-compose run --rm web bundle exec rake mastodon:webpush:generate_vapid_key` to generate secret keys needed by your `.env.production` file
 6. Once you've double checked your configuration is all set, run `docker-compose run --rm web bundle exec rake mastodon:setup`
 7. Once setup is done, you can run `docker-compose up -d`
