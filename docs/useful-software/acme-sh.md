@@ -5,6 +5,11 @@
 curl https://get.acme.sh | sh -s email=my@example.com
 ```
 
+## Change Default CA
+```bash
+acme.sh --set-default-ca --server letsencrypt
+```
+
 ## Issue Certificate
 ### Webroot Method
 ```bash
