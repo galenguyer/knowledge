@@ -1,6 +1,6 @@
 # Trunk-Recorder
-[trunk-recorder](https://github.com/robotastic/trunk-recorder/) can listen to P25 Phase I and II trunks, as well as conventional frequency scanning. It can stream the audio it receives over UDP or TCP[^1], or upload it to streaming sites like [broadcastify.com](https://broadcastify.com).
-I also have a fork of it at [galenguyer/trunk-recorder](https://github.com/galenguyer/trunk-recorder/tree/develop)
+[trunk-recorder](https://github.com/robotastic/trunk-recorder/) can listen to P25 Phase I and II trunks, as well as conventional frequency scanning. It can stream the audio it receives over UDP or TCP<!--[^1]-->, or upload it to streaming sites like [broadcastify.com](https://broadcastify.com/calls/).
+<!--I also have a fork of it at [galenguyer/trunk-recorder](https://github.com/galenguyer/trunk-recorder/tree/develop)-->
 
 ## Debian 11 Installation
 These instructions should work for installing trunk-recorder on a clean Debian 11 installation.
@@ -12,7 +12,7 @@ These instructions should work for installing trunk-recorder on a clean Debian 1
     ```
 1. Clone the repository:
     ```bash
-    git clone --branch=develop https://github.com/galenguyer/trunk-recorder
+    git clone https://github.com/robotastic/trunk-recorder
     cd trunk-recorder
     ```
 1. Use CMake to generate build files. It's recommended you do this in a separate directory
@@ -25,4 +25,4 @@ These instructions should work for installing trunk-recorder on a clean Debian 1
     make -j$(nproc) install
     ```
 
-[^1]: The simplestream plugin for raw UDP and TCP has a segmentation fault when calling `call->get_system()` (around [line 63](https://github.com/galenguyer/trunk-recorder/blob/develop/plugins/simplestream/simplestream.cc#L63) in `plugins/simplestream/simplestream.cc`). At the time of writing, my work on the development branch is to try and fix this.
+<!-- [^1]: The simplestream plugin for raw UDP and TCP has a segmentation fault when calling `call->get_system()` (around [line 63](https://github.com/galenguyer/trunk-recorder/blob/develop/plugins/simplestream/simplestream.cc#L63) in `plugins/simplestream/simplestream.cc`). At the time of writing, my work on the development branch is to try and fix this. -->
